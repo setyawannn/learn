@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipe Data Object</title>
+</head>
+<body>
+<script>
+
+    const orang = {
+        "nama lengkap" : "Prayoga Adi",
+        alamat : "Malang",
+        umur : 17,
+    };
+
+    // Menambah atau Mengubah
+    // orang["nama"] = "Prayoga Adi";
+    // orang["alamat"] = "Malang";
+    // orang["umur"] = 17;
+
+    // mengakses
+    console.info(`Nama : ${orang["nama lengkap"]}`);
+    console.info(`Alamat : ${orang.alamat}`);
+    console.info(`Umur : ${orang.umur}`);
+
+    console.table(orang);
+
+    // Menghapus
+    delete orang["umur"];
+    console.table(orang);
+
+
+
+
+
+
+</script>
+</body>
+</html>

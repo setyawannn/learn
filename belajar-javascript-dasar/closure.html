@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Closure</title>
+</head>
+<body>
+<script>
+
+    function creatAdder(value) {
+        const owner = "Adi";
+
+        function add(param) {
+            console.info(owner);
+            return value + param;
+        }
+
+        return add;
+    }
+
+    const addTwo = creatAdder(2);
+    // function addTwo(param) {
+    //     console.info("Adi");
+    //     return 2 + param;
+    // }
+    console.info(addTwo(10));
+    console.info(addTwo(20));
+
+    const addTen = creatAdder(10);
+    // function addTwo(param) {
+    //     console.info("Adi");
+    //     return 2 + param;
+    //
+    console.info(addTen(10));
+    console.info(addTen(20));
+
+
+</script>
+</body>
+</html>

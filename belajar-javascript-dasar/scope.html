@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scope</title>
+</head>
+<body>
+<script>
+
+    // Global Scope
+    let counter = 0;
+
+    // Global Scope
+    function hitMe() {
+        // Local Scope hitMe
+        counter++;
+
+    }
+
+    // Global Scope
+    function other() {
+        // Local Scope other
+
+    }
+    hitMe();
+    hitMe();
+
+    console.info(counter);
+
+    function first() {
+        let firstVariable = `FIRST`;
+
+        function firstNested() {
+            console.info(firstVariable);
+        }
+
+        firstNested();
+    }
+
+
+    function second() {
+        let secondVariable = `SECOND`;
+    }
+
+    first();
+    second();
+
+    // console.info(firstVariable); // ERROR
+    // console.info(secondVariable); // ERROR
+
+
+
+
+</script>
+</body>
+</html>
